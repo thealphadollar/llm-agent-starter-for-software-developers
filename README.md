@@ -672,14 +672,61 @@ This section tracks planned improvements and items to be addressed for this road
 * **Formatting:**
   * Ensure consistent formatting for resource links (e.g., "**[Resource Title (Source/Author)] (URL):** Brief description.").
 
-## How to Contribute
+## How to Contribute 🤝📝
 
-[Placeholder for contribution guidelines]
+We welcome contributions to make this roadmap even better! Whether it's suggesting new resources, pointing out outdated information, fixing a typo, or proposing a new section, your input is valuable.
 
-## License
+**Ways to Contribute:**
 
-[Placeholder for license information]
+* **Suggesting Resources/Changes:**
+  * If you find a great article, tool, paper, or community that you think should be included, please let us know!
+  * If you spot something that's unclear, incorrect, or could be improved, we appreciate the feedback.
+  * The best way to suggest changes is by opening an [Issue](https://github.com/thealphadollar/llm-agent-starter-for-software-developers/issues) on GitHub. Please provide as much detail as possible.
 
-## Disclaimer
+* **Making Direct Edits (Pull Requests):**
+    1. **Fork the Repository:** Create your own copy of the project.
+    2. **Create a Branch:** Make a new branch in your fork for your changes (e.g., `feature/add-new-resource` or `fix/typo-in-section-2`).
+    3. **Make Your Changes:** Edit the `README.md` or other relevant files.
+    4. **Commit Your Changes:** Write clear and concise commit messages.
+    5. **Push to Your Fork:** Push your changes to your forked repository.
+    6. **Open a Pull Request (PR):** Submit a PR from your branch to the `main` branch of the original repository.
+        * Clearly describe the changes you've made in the PR description.
+        * Link to any relevant Issues.
 
-[Placeholder for disclaimer on generation of the repository with LLM Agent with details information]
+**Guidelines:**
+
+* **Relevance:** Ensure that suggested resources are relevant to software engineers learning about LLMs and AI agents.
+* **Quality:** Prefer high-quality, authoritative, and up-to-date resources.
+* **Formatting:** Try to follow the existing Markdown formatting and style of the document.
+* **Respectful Interaction:** All contributions and discussions should be respectful and constructive.
+
+We look forward to your contributions!
+
+## License 📜
+
+This project is licensed under the **MIT License**.
+
+You can find the full license text in the [LICENSE](LICENSE) file in this repository.
+
+In brief, this means you are free to:
+
+* **Share:** Copy and redistribute the material in any medium or format.
+* **Adapt:** Remix, transform, and build upon the material for any purpose, even commercially.
+
+Under the following terms:
+
+* **Attribution:** You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+
+This is a permissive free software license, meaning it has minimal restrictions on reuse.
+
+## Disclaimer 📢
+
+This roadmap and the resources provided are intended for educational and informational purposes only. The field of Large Language Models (LLMs) and AI Agents is rapidly evolving, and while we strive to provide accurate and up-to-date information, we cannot guarantee the completeness, correctness, or timeliness of all content.
+
+* **No Guarantees:** The information is provided "as is" without any warranties, express or implied.
+* **External Links:** This roadmap contains links to third-party websites and resources. We are not responsible for the content or practices of these external sites.
+* **AI-Assisted Generation:** Parts of this roadmap have been generated or assisted by AI language models. While reviewed and curated by humans, there may be unintentional errors or biases. Always cross-reference information, especially for critical applications.
+* **Not Professional Advice:** The content should not be considered professional advice (e.g., legal, financial, or technical). Always consult with qualified professionals for specific advice.
+* **Use at Your Own Risk:** Your use of the information in this roadmap is at your own risk.
+
+We encourage critical thinking and independent verification of all information. If you find any inaccuracies or have suggestions for improvement, please refer to the "How to Contribute" section.
