@@ -247,3 +247,72 @@
   ```
 
 - **Next Steps:** The initial roadmap is complete. Awaiting supervisor review and further instructions for refinement or new tasks.
+
+## Session 7: Prioritizing Future Enhancements & TODOs
+
+- **Objective:** Review the existing TODOs, analyze them, and prepare for iterative refinement of the roadmap.
+- **Process:** List each TODO item from the "Future Enhancements & TODOs" section of `README.md` with a brief analysis of its complexity and potential impact. This will help in deciding which tasks to tackle next.
+
+- **TODO Item Analysis (Awaiting Supervisor Feedback for Prioritization):**
+
+    1. **Task:** Systematically review and add relevant emojis to all existing and future section/subsection headers.
+        - **Description:** Ensure all H2 and H3 headers have a relevant emoji for visual appeal and scannability. Some are already done.
+        - **Estimated Complexity:** Low
+        - **Potential Impact:** Medium (Improves readability and visual engagement)
+        - **Supervisor Priority (1-5, 10=highest):** 10
+
+    2. **Task:** Consider adding small, illustrative code snippets or pseudo-code for concepts like RAG or a simple API call.
+        - **Description:** Add practical, short code examples in relevant sections (e.g., 2.2 APIs/SDKs, 2.4 Vector DBs, 4.2 Advanced RAG) to make concepts more tangible for engineers.
+        - **Estimated Complexity:** Medium (Requires careful crafting of concise and correct examples)
+        - **Potential Impact:** High (Significantly increases practical value and understanding)
+        - **Supervisor Priority (1-5, 5=highest):** 5
+
+    3. **Task:** Evaluate if `README.md` is becoming too long; consider breaking it into multiple smaller, linked Markdown files and/or hosting as a static site.
+        - **Description:** The `README.md` is quite extensive. Assess if splitting it into separate files per major section (linked from a main `README.md` or `index.md`) or moving to a static site generator (GitHub Pages with Jekyll/VitePress/Docusaurus) would improve navigability and maintainability.
+        - **Estimated Complexity:** Medium-High (Involves restructuring, link management, and potentially new tooling setup)
+        - **Potential Impact:** High (Improves user experience for a large document, enables better SEO if a site)
+        - **Supervisor Priority (1-5, 5=highest):** SKIP (To be kept in README.md TODOs for future consideration)
+
+    4. **Task:** Expand "How to Contribute" section.
+        - **Description:** The current section is good, but could be more detailed regarding types of contributions sought, coding standards (if code snippets are added), and process for larger suggestions.
+        - **Estimated Complexity:** Low-Medium
+        - **Potential Impact:** Medium (Encourages more and higher-quality community contributions)
+        - **Supervisor Priority (1-5, 5=highest):** 6
+
+    5. **Task:** Periodically review and update links.
+        - **Description:** Regularly check all external links to ensure they are still active and point to the correct resources. This is an ongoing maintenance task.
+        - **Estimated Complexity:** Low (per review cycle, but ongoing)
+        - **Potential Impact:** Medium (Maintains credibility and usefulness of the roadmap)
+        - **Supervisor Priority (1-5, 5=highest):** SKIP (Note to be added to README.md TODOs to encourage community contributions for this and to set up periodic reviews by maintainers)
+
+    6. **Task:** Ensure consistent formatting and styling throughout the document.
+        - **Description:** Perform a full pass to ensure consistent use of bolding, italics, list formats, link styling, etc. (Partially addressed by the request to follow existing markdown).
+        - **Estimated Complexity:** Low-Medium
+        - **Potential Impact:** Medium (Improves professionalism and readability)
+        - **Supervisor Priority (1-5, 5=highest):** 9
+
+    7. **Task:** Add a "Key Takeaways" or "TL;DR" summary for each major section or subsection.
+        - **Description:** Provide brief summaries for quick understanding and to reinforce main points for each significant part of the roadmap.
+        - **Estimated Complexity:** Medium (Requires careful summarization of dense topics)
+        - **Potential Impact:** High (Improves scannability and accessibility for busy readers)
+        - **Supervisor Priority (1-5, 5=highest):** 7
+
+    8. **Task:** Consider adding a glossary of common LLM and AI agent terms.
+        - **Description:** Create a separate section or linked page with definitions of frequently used terminology in the LLM/Agent space for easier understanding, especially for newcomers.
+        - **Estimated Complexity:** Medium (Requires curating terms and writing clear definitions)
+        - **Potential Impact:** High (Greatly aids understanding for the target audience)
+        - **Supervisor Priority (1-5, 5=highest):** 4
+
+    9. **Task:** Periodically check for updates to the OWASP Top 10 for LLM Applications list.
+        - **Description:** The OWASP list is versioned and will evolve. Ensure Section 4.5 reflects the latest recommendations. This is an ongoing maintenance task.
+        - **Estimated Complexity:** Low (per review cycle, but ongoing)
+        - **Potential Impact:** Medium (Keeps security information current and relevant)
+        - **Supervisor Priority (1-5, 5=highest):** SKIP (Note to be added to README.md TODOs to encourage community contributions for this and to set up periodic reviews by maintainers)
+
+    10. **Task:** Ensure consistent formatting for resource links.
+        - **Description:** Standardize all resource links to the format: "**[Resource Title (Source/Author)](URL):** Brief description."
+        - **Estimated Complexity:** Low-Medium (Requires a careful pass through the entire document)
+        - **Potential Impact:** Medium (Improves readability and consistency)
+        - **Supervisor Priority (1-5, 5=highest):** 8
+
+- **Next Steps:** Awaiting supervisor feedback on priorities to begin tackling these enhancements.

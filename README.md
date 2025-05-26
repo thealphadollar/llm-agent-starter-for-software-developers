@@ -655,14 +655,14 @@ This section tracks planned improvements and items to be addressed for this road
 * **Content & Structure:**
   * Systematically review and add relevant emojis to all existing and future section/subsection headers for better visual appeal and scannability.
   * Consider adding small, illustrative code snippets or pseudo-code for concepts like RAG or a simple API call in relevant sections to make it more practical for engineers.
-  * Evaluate if the `README.md` is becoming too long. If so, plan to break it down into multiple smaller, linked Markdown files (e.g., one file per major section) for better readability and maintainability. This could be hosted as a static site (e.g., using GitHub Pages with Jekyll or a similar tool).
+  * Evaluate if the `README.md` is becoming too long. If so, plan to break it down into multiple smaller, linked Markdown files (e.g., one file per major section) for better readability and maintainability. This could be hosted as a static site (e.g., using GitHub Pages with Jekyll or a similar tool). **(Note: Deferred for future consideration due to complexity)**
   * Create a more detailed "How to Contribute" section, outlining guidelines for suggestions, pull requests, and resource submissions.
   * Add a proper License section (e.g., MIT or Creative Commons).
-  * Periodically review and update links to ensure they are still active and relevant.
+  * Periodically review and update links to ensure they are still active and relevant. **(Note: Community contributions for link checking are welcome! Maintainers will also aim for periodic reviews.)**
   * Ensure consistent formatting and styling throughout the document.
   * Add a "Key Takeaways" or "TL;DR" summary for each major section or subsection.
   * Consider adding a glossary of common LLM and AI agent terms.
-  * Periodically check for updates to the OWASP Top 10 for LLM Applications list and update section 4.5 accordingly.
+  * Periodically check for updates to the OWASP Top 10 for LLM Applications list and update section 4.5 accordingly. **(Note: Community contributions for checking updates are welcome! Maintainers will also aim for periodic reviews.)**
 
 * **Tooling & Automation:**
   * Consider setting up a simple static site (e.g., using GitHub Pages with Jekyll or a VitePress/Docusaurus site) for better readability, navigation, and SEO if the content grows significantly.
