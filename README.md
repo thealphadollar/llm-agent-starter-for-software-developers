@@ -1160,56 +1160,7 @@ This section tracks planned improvements and items to be addressed for this road
 
 ## How to Contribute 🤝📝
 
-We warmly welcome contributions to make this roadmap even better! Your input is valuable, whether it's suggesting new resources, pointing out outdated information, fixing a typo, proposing a new section, or helping to maintain the quality of the guide. Our goal is to create a community-driven resource that benefits all software engineers looking to navigate the world of LLMs and AI Agents.
-
-**Types of Contributions We're Looking For:**
-
-* **Resource Suggestions:**
-  * Found a great article, tutorial, research paper, tool, or an exemplary open-source project? Please share it!
-  * Ensure it's relevant, high-quality, and preferably, provides a unique perspective or practical insight.
-* **Content Improvements & Corrections:**
-  * Spotted a typo, a broken link, or outdated information? Let us know.
-  * Think a section could be clearer, more detailed, or better structured? We're open to suggestions.
-  * If you have expertise in a specific area and can expand on it, that's fantastic.
-* **New Content Proposals:**
-  * Is there a topic related to LLMs/Agents for software engineers that you think is missing? Propose a new section or subsection.
-  * It's helpful to outline what the new content would cover and why it's important.
-* **Maintaining Quality:**
-  * Help with reviewing pull requests from other contributors.
-  * Assist in verifying that links are still active and resources remain relevant (see "Future Enhancements & TODOs 📝" for specific notes on periodic reviews).
-* **Code Snippets & Examples (Future):**
-  * While not a primary focus yet (see TODOs), in the future, we might add small, illustrative code snippets. If you have ideas for concise, helpful examples for concepts like basic API calls, RAG components, or simple agent logic, you can propose them.
-  * **(Note on Coding Standards):** If/when code examples become a more significant part of this guide, we will establish simple coding standards (e.g., language choice, style, conciseness) to ensure consistency.
-
-**Ways to Contribute:**
-
-* **Suggesting Resources/Changes via Issues:**
-  * The best way to suggest changes, new resources, or report issues (like broken links or outdated content) is by opening an [Issue](https://github.com/thealphadollar/llm-agent-starter-for-software-developers/issues) on GitHub.
-  * Please provide as much detail as possible:
-    * For new resources: Include the link, a brief explanation of why it's valuable, and where you think it fits in the roadmap.
-    * For corrections: Clearly indicate what needs to be changed and why.
-    * For larger suggestions (like a new section): Briefly outline your idea.
-* **Making Direct Edits (Pull Requests):**
-    1. **Fork the Repository:** Create your own copy of this project.
-    2. **Create a Branch:** Make a new branch in your fork for your changes (e.g., `feature/add-rag-advanced-resources` or `fix/typo-section-2.1`).
-    3. **Make Your Changes:** Edit the `README.md` or other relevant files.
-        * Focus on clear, concise, and accurate information.
-        * Try to maintain the existing Markdown formatting and style (e.g., for headers, lists, links). Refer to the "Ensure consistent formatting for resource links" TODO if you're adding new resource links.
-    4. **Commit Your Changes:** Write clear and concise commit messages (e.g., "docs: Add new resource for advanced RAG techniques" or "fix: Correct typo in prompt engineering section").
-    5. **Push to Your Fork:** Push your changes to your forked repository.
-    6. **Open a Pull Request (PR):** Submit a PR from your branch to the `main` branch of the `thealphadollar/llm-agent-starter-for-software-developers` repository.
-        * Clearly describe the changes you've made in the PR description.
-        * Link to any relevant Issues (e.g., "Closes #123" or "Addresses #456").
-        * If your PR is a work in progress, consider creating it as a "Draft" PR.
-
-**Guidelines for All Contributions:**
-
-* **Relevance:** Ensure that suggested resources or changes are directly relevant to software engineers learning about or working with LLMs and AI agents.
-* **Quality over Quantity:** Prefer high-quality, authoritative, and up-to-date resources. Avoid overly simplistic or low-value content.
-* **Maintainability:** For larger additions or structural changes, consider how they might impact the overall readability and maintainability of the guide. It's often good to discuss significant changes via an Issue first.
-* **Respectful Interaction:** All contributions and discussions within the community (issues, PRs, etc.) should be respectful, constructive, and professional. We aim for a welcoming and collaborative environment.
-
-We look forward to your contributions and appreciate your help in making this a valuable resource for the software engineering community!
+See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines, how to suggest resources, and how to submit pull requests or showcase projects.
 
 ---
 
