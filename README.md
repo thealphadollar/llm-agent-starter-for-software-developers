@@ -1,4 +1,4 @@
-# llm-agent-starter-for-software-developers
+# LLMs and AI Agents: A Practical Starter Guide for Software Engineers
 
 Welcome, fellow software engineers! This guide is your launching pad into the fascinating and rapidly evolving world of Large Language Models (LLMs) and AI Agents. Our goal is to demystify these powerful technologies and provide a structured roadmap to help you understand their core concepts, explore practical tools, and discover how they can be leveraged across various software engineering specializations.
 
