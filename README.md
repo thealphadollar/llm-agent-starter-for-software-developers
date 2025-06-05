@@ -67,18 +67,13 @@ AI Agents are systems that perceive their environment through sensors, make deci
 
 > **🛠️ Hands-On Resources: Build Your First AI Agent**
 >
-> * **LangChain Agents:** [LangChain Agents Quickstart (Python Docs)](https://python.langchain.com/docs/modules/agents/quick_start) — Step-by-step guide to building your first agent with LangChain.
-> * **Hugging Face Transformers Agents:** [Transformers Agents Tutorial (Hugging Face Blog)](https://huggingface.co/blog/transformers-agents) — Official walkthrough for building agents using Hugging Face's `transformers-agents` library.
+> * **LangChain Agents:** [LangChain Agents Quickstart (Python Docs)](https://python.langchain.com/v0.1/docs/modules/agents/quick_start/) — Step-by-step guide to building your first agent with LangChain.
 > * **CrewAI:** [CrewAI Quickstart (Official Docs)](https://docs.crewai.com/getting-started/quickstart) — Build collaborative, role-based agents with CrewAI.
-> * **AutoGen:** [AutoGen Basic Tutorial (Microsoft)](https://microsoft.github.io/autogen/docs/getting-started/basic-tutorial/) — Create multi-agent conversations and workflows with AutoGen.
-> * **Colab Notebook Example:** [LangChain Agent Colab (Community)](https://colab.research.google.com/drive/1Qw6QwQwQwQwQwQwQwQwQwQwQwQwQwQw) — Interactive notebook to try out a simple agent (replace with a real link).
-> * **Demo Repos:** [LangChain Agent Examples (GitHub)](https://github.com/langchain-ai/langchain/tree/master/examples/agents) — Community-contributed agent demos.
+> * **AutoGen:** [AutoGen Basic Tutorial (Microsoft)](https://microsoft.github.io/autogen/0.2/docs/tutorial/introduction/) — Create multi-agent conversations and workflows with AutoGen.
+> * **Demo Repos:** [LangChain Agent Tutorial Notebooks (GitHub)](https://github.com/langchain-ai/langchain/tree/master/docs/docs/tutorials) — Community-contributed agent demos.
 
 * **Key Resources:**
   * **[Introduction to AI Agents (Prompt Engineering Guide)](https://www.promptingguide.ai/agents/introduction):** Part of the comprehensive Prompt Engineering Guide, this section explains what AI agents are, why to build with them, their components, and common use cases.
-  * **[What Are AI Agents and How Do They Work? (NVIDIA Blogs)](https://blogs.nvidia.com/blog/what-are-ai-agents/):** An article from NVIDIA explaining AI agents, their components, and potential applications.
-  * **[LLM Powered Autonomous Agents (Hugging Face Blog)](https://huggingface.co/blog/transformers-agents):** A Hugging Face blog post discussing the concept of LLM-powered autonomous agents and their `transformers-agents` library.
-  * **[Understanding AI Agents: A Simple Guide for Beginners (Medium - various authors, search for relevant, well-regarded articles)]:** Many Medium articles provide introductory explanations. Look for those from reputable authors or publications.
 
 AI Agents are a rapidly developing area, promising to unlock more sophisticated and automated applications of LLMs.
 
