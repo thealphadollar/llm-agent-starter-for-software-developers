@@ -42,8 +42,8 @@ Large Language Models (LLMs) are a type of artificial intelligence (AI) model sp
 > * **Video Explainers:** [3Blue1Brown: Large Language Models Explained (2024)](https://www.3blue1brown.com/lessons/mini-llm) — Visual, intuitive intro to LLMs. [Transformers, explained (YouTube)](https://www.youtube.com/watch?v=Pnd8bCJ4Z3A)
 
 * **Key Resources:**
-  * **[What is a large language model (LLM)? (Google)](https://developers.google.com/machine-learning/resources/large-language-models):** An overview of LLMs from Google, explaining what they are, how they work, and their applications.
-  * **[What is a Large Language Model (LLM)? (Mozilla)](https://www.mozilla.org/en-US/what-is-a-large-language-model-llm/):** Mozilla's explanation of LLMs, focusing on their capabilities and societal impact.
+  * **[What is a large language model (LLM)? (Google)](https://developers.google.com/machine-learning/resources/intro-llms):** An overview of LLMs from Google, explaining what they are, how they work, and their applications.
+  * **[What is a Large Language Model (LLM)? (Mozilla)](https://ai-guide.future.mozilla.org/content/introduction/#if-youre-new-to-ai):** Mozilla's explanation of LLMs, focusing on their capabilities and societal impact.
   * **[Large Language Models (LLMs) (Hugging Face)](https://huggingface.co/docs/transformers/llm_tutorial):** A tutorial from Hugging Face, a leading platform for AI models, covering LLMs within the context of their `transformers` library.
 
 Understanding the fundamental nature of LLMs is the first step for any software engineer looking to leverage their power.
