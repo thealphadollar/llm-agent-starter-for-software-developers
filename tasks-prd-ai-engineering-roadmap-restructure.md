@@ -43,9 +43,9 @@
   - [X] 3.1 Write the "Why AI for Engineers?" motivation section
     - [X] 3.1.1 Draft a compelling introduction on the importance of AI/LLMs for software engineers
     - [X] 3.1.2 Incorporate 2-3 high-level case studies or real-world examples
-  - [ ] 3.2 Create the "Quick Start: 30-Minute Challenge" section
-    - [ ] 3.2.1 Design a simple, engaging hands-on task for immediate value
-    - [ ] 3.2.2 Provide clear, step-by-step instructions and code snippets
+  - [X] 3.2 Create the "Quick Start: 30-Minute Challenge" section
+    - [X] 3.2.1 Design a simple, engaging hands-on task for immediate value
+    - [X] 3.2.2 Provide clear, step-by-step instructions and code snippets
 - [ ] 4.0 Restructure Core Learning Content
   - [ ] 4.1 Consolidate all "Hands-On Resources" into a single, categorized list
     - [ ] 4.1.1 Create a master list of all hands-on resources from `external-link-catalog.md`
