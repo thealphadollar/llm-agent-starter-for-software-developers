@@ -329,6 +329,25 @@ Frontend engineers can leverage LLMs to accelerate development by generating com
 
 For DevOps engineers, AI agents can automate complex CI/CD workflows, provide intelligent monitoring and incident response, and assist in managing Infrastructure as Code (IaC). This path is about using AI to improve the reliability and efficiency of development and operations.
 
+#### Key Use Cases
+
+* **Intelligent Incident Response & Self-Healing:** AI agents can monitor logs and metrics, perform root cause analysis on production alerts (e.g., Kubernetes pod crashes), and even execute automated remediation steps like restarting a service or rolling back a failed deployment.
+* **Automated CI/CD Troubleshooting:** Reduce time-to-resolution for broken builds by using LLMs to analyze pipeline logs, explain cryptic error messages in plain English, and suggest concrete fixes for dependency conflicts or script failures.
+* **Natural Language Infrastructure & Operations (ChatOps):** Interact with your systems using plain English. Build ChatOps bots (for Slack, MS Teams, etc.) that can generate IaC configurations (Terraform, Kubernetes YAML), query cloud resource status, or summarize system health on demand.
+
+#### Hands-On Tutorials
+
+* **[End-to-End Multi-Agent System with CI/CD](https://dev.to/aws-builders/end-to-end-testing-and-deployment-of-a-multi-agent-ai-system-with-docker-langgraph-and-circleci-4gee)** - A comprehensive tutorial on building, testing, and deploying a multi-agent AI system with Docker, LangGraph, and CircleCI, providing a full-stack, real-world example.
+* **[Build a Real-Time Kubernetes AI Agent](https://www.digitalocean.com/community/tutorials/real-time-k8s-agent-genai-platform)** - This guide walks you through creating an AI-powered assistant that can generate and validate Kubernetes manifests, troubleshoot issues, and retrieve live cluster details.
+* **[Create a DevOps ChatBot for Microsoft Teams](https://saimeda.medium.com/build-your-own-devops-copilot-with-mistral-7b-langchain-microsoft-teams-and-aws-5406daab9ecd)** - Learn how to build a DevOps copilot inside Microsoft Teams using an open-source LLM (Mistral 7B), LangChain, and AWS Lambda to interact with your infrastructure.
+
+#### Key Considerations
+
+* **Security & Permissions:** Giving an AI agent access to production infrastructure is high-risk. Always apply the principle of least privilege and require human approval for any state-changing actions (e.g., deployments, resource deletion).
+* **Reliability & Human Oversight:** LLM outputs can be non-deterministic. For critical operations, implement a "human-in-the-loop" pattern where an engineer must approve the agent's proposed plan before execution.
+* **Contextual Awareness:** For an agent to be effective, it needs deep context about your specific environment, runbooks, and toolchains. This often requires using RAG to ground the agent in your internal documentation.
+* **Cost Management:** High-frequency operations, like real-time log analysis or constant system monitoring with a powerful LLM, can become expensive. Use smaller, faster models where possible and implement caching.
+
 > *This section is a work in progress. Community contributions are welcome!*
 
 ### For Data Engineers 📊🛠️
