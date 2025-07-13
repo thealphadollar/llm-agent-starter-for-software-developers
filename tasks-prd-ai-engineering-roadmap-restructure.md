@@ -72,17 +72,24 @@
   - [X] 6.2 Develop a template for role-specific content
     - [X] 6.2.1 Define the standard structure for each role section (e.g., Key Use Cases, Core Tools, Tutorials)
     - [X] 6.2.2 Add the template to `CONTRIBUTING.md`
-- [ ] 7.0 Populate Specialization Sections
+- [X] 7.0 Populate Specialization Sections
   - [X] 7.1 Develop DevOps Engineering Section
     - [X] 7.1.1 Research and write Key Use Cases for DevOps
     - [X] 7.1.2 Find and link to 3 high-quality, hands-on tutorials
     - [X] 7.1.3 Summarize key considerations for AI in DevOps
-- [ ] 8.0 Verify Links and Resources
-  - [ ] 8.1 Check all links in the new `README-v2.md` for validity
-    - [ ] 8.1.1 Use a link checker tool or script to identify broken links
-    - [ ] 8.1.2 Replace or remove dead links
-  - [ ] 8.2 Ensure all resources are relevant and high-quality
-- [ ] 9.0 Implement Supporting Documentation
-  - [ ] 9.1 Create `CHANGELOG.md`
-    - [ ] 9.1.1 Add an entry for this initial restructuring (v2.0)
-  - [ ] 9.2 Final review and replacement of old `README.md` with `README-v2.md`
+- [X] 8.0 Develop Advanced Topics Section
+  - [X] 8.1 Research and write content for all advanced topics
+    - [X] 8.1.1 Fine-tuning LLMs
+    - [X] 8.1.2 Retrieval Augmented Generation (RAG) - Deep Dive
+    - [X] 8.1.3 Multi-Agent Systems
+    - [X] 8.1.4 MLOps for LLMs (LLMOps)
+    - [X] 8.1.5 Security for LLM Applications
+- [X] 9.0 Verify Links and Resources
+  - [X] 9.1 Check all links in the new `README-v2.md` for validity
+    - [X] 9.1.1 Use a link checker tool or script to identify broken links
+    - [X] 9.1.2 Replace or remove dead links
+  - [X] 9.2 Ensure all resources are relevant, latest, and high-quality
+- [ ] 10.0 Implement Supporting Documentation
+  - [ ] 10.1 Create `CHANGELOG.md`
+    - [ ] 10.1.1 Add an entry for this initial restructuring (v2.0)
+  - [ ] 10.2 Final review and replacement of old `README.md` with `README-v2.md`

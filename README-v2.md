@@ -364,29 +364,138 @@ QA engineers can employ AI to generate comprehensive test cases, create realisti
 
 ## Advanced Topics (Optional Deep Dive) 🌌
 
+This section is for those who want to go beyond the basics and understand the more complex techniques that power state-of-the-art LLM applications.
+
 ### Fine-tuning LLMs ⚙️🔧
 
-*Placeholder for fine-tuning content.*
+**Fine-tuning** is the process of taking a pre-trained general-purpose LLM and further training it on a smaller, domain-specific dataset. This adapts the model to excel at a specific task, learn a particular style, or understand a niche knowledge domain.
+
+* **When to Use Fine-tuning (vs. RAG):** While RAG provides external knowledge, fine-tuning is better for teaching the model a *skill* or a *style*. Use it when you need the model to learn a specific format, adopt a consistent persona, or understand a large body of knowledge that's difficult to fit into a prompt.
+* **Parameter-Efficient Fine-Tuning (PEFT):** Full fine-tuning (updating all model weights) is computationally expensive. PEFT methods significantly lower this barrier by updating only a small subset of the model's parameters.
+  * **LoRA (Low-Rank Adaptation):** Injects smaller, trainable matrices into the model's layers. This is the most popular PEFT technique.
+  * **QLoRA (Quantized LoRA):** An even more efficient method that uses 4-bit quantization to reduce memory usage, making it possible to fine-tune very large models on a single GPU.
+
+#### Key Resources
+
+* **[A Definitive Guide to QLoRA](https://medium.com/@amodwrites/a-definitive-guide-to-qlora-fine-tuning-falcon-7b-with-peft-78f500a1f337):** A comprehensive guide with code examples for fine-tuning a 7B model using QLoRA.
+* **[Hugging Face PEFT Library](https://huggingface.co/docs/peft/index):** The official documentation for the library that implements LoRA, QLoRA, and other PEFT methods.
+* **[Fine-Tuning Open LLMs in 2025 with Hugging Face](https://blog.cubed.run/fine-tuning-open-llms-in-2025-with-hugging-face-c7ad75efabab):** A recent guide covering the latest techniques and best practices.
 
 ### Retrieval Augmented Generation (RAG) - Deep Dive 🧠🔗
 
-*Placeholder for RAG deep-dive content.*
+Basic RAG retrieves relevant documents and passes them to an LLM. Advanced RAG optimizes every step of this process to deliver more accurate and contextually-aware answers.
+
+* **Pre-Retrieval (Chunking & Embedding):**
+  * **Chunking Strategy:** Go beyond fixed-size chunks. Use **semantic chunking** (splitting based on meaning) or **content-aware chunking** (e.g., splitting by paragraphs or sections) to preserve context.
+  * **Embedding Optimization:** The quality of your embeddings is critical. Test different models from the **[MTEB Leaderboard](https://huggingface.co/spaces/mteb/leaderboard)** to find the best one for your data.
+* **Retrieval (Fetching the Best Context):**
+  * **Hybrid Search:** Combine traditional keyword search (like BM25) with semantic vector search to get the best of both worlds—precision and conceptual relevance.
+  * **Query Transformations:** Use an LLM to improve the user's query *before* retrieval. Techniques like **[HyDE](https://arxiv.org/abs/2212.10496)** (generating a hypothetical document) or **Step-Back Prompting** (generating a more general query) can significantly improve retrieval accuracy.
+  * **Re-ranking:** Retrieve a larger set of initial documents and then use a more sophisticated model (like a **[Cross-Encoder](https://www.sbert.net/docs/pretrained_models.html#cross-encoders)** or an LLM) to re-rank the results and select the most relevant ones.
+* **Post-Retrieval (Processing Context):**
+  * **Context Filtering & Compression:** Use an LLM to filter out irrelevant retrieved chunks or to summarize lengthy passages before sending them to the final generation step. This reduces noise and manages the context window.
+  * **Iterative Refinement (e.g., [SELF-RAG](https://arxiv.org/abs/2310.11511)):** Create systems where the LLM can reflect on the retrieved documents and iteratively retrieve more information if the initial context is insufficient.
+
+#### Key Resources
+
+* **[Advanced RAG Techniques: an Illustrated Overview](https://pub.towardsai.net/advanced-rag-techniques-an-illustrated-overview-04d193d8fec6):** A comprehensive study of advanced RAG techniques and algorithms, with helpful diagrams.
+* **[Improve RAG results in your LLM applications from basic to advanced](https://medium.com/@csakash03/improve-rag-results-in-your-llm-applications-from-basic-to-advanced-c3078356811f):** A practical guide covering strategies for pre-retrieval, retrieval, and post-retrieval.
+* **[LangChain & LlamaIndex Docs:** Both frameworks have extensive documentation on advanced RAG pipelines, including code examples for all the techniques mentioned above.
 
 ### Multi-Agent Systems 🤖🤝🤖
 
-*Placeholder for multi-agent systems content.*
+**Multi-Agent Systems** involve multiple AI agents collaborating to solve complex problems that a single agent would struggle with. Each agent can have a specialized role, different tools, and distinct knowledge, working together towards a common objective.
+
+* **Why use multiple agents?**
+  * **Task Decomposition:** Break down complex problems into smaller, manageable sub-tasks for specialized agents (e.g., a "researcher" agent and a "writer" agent).
+  * **Diverse Perspectives:** Combine agents with different skills or "personalities" to achieve more robust solutions (e.g., a "bull" and "bear" agent for financial analysis).
+  * **Improved Reasoning:** Agents can debate, critique each other's work, and collectively arrive at a better solution.
+
+* **Popular Frameworks:**
+  * **[CrewAI](https://www.crewai.com/):** A framework designed to orchestrate role-playing, autonomous AI agents. It emphasizes collaborative intelligence and is great for hierarchical team structures.
+  * **[AutoGen (Microsoft)](https://microsoft.github.io/autogen/):** An open-source framework that enables building applications with multiple agents that converse with each other to solve tasks. It's highly flexible and powerful for research and complex workflows.
+  * **[LangGraph (LangChain)](https://langchain-ai.github.io/langgraph/):** Extends the LangChain ecosystem to build stateful, multi-agent applications by modeling them as graphs. It's excellent for creating cyclical and complex agentic behaviors.
+
+#### Key Resources
+
+* **[Comparative Analysis of LLM Agent Frameworks](https://medium.com/@josefsosa/white-paper-comparative-analysis-of-llm-agent-frameworks-3d9ea8c0212f):** A white paper comparing CrewAI, LangGraph, and AutoGen, with strengths and ideal use cases for each.
+* **[Building Coordinated AI Agents with LangGraph: A Hands-On Tutorial](https://codecut.ai/building-multi-agent-ai-langgraph-tutorial/):** A practical tutorial for building a multi-agent investment committee with LangGraph.
+* **[Introduction to Multi-Agent LLM Orchestration (GoPenAI Blog)](https://blog.gopenai.com/how-to-easily-build-an-llm-multi-agent-team-abcca8628d9e):** A tutorial on building a multi-agent app with a supervisor architecture using LangGraph.
 
 ### MLOps for LLMs (LLMOps) 🛠️🔄
 
-*Placeholder for LLMOps content.*
+**LLMOps** adapts traditional Machine Learning Operations (MLOps) for the unique challenges of managing the lifecycle of Large Language Models. It provides the practices and tools to reliably deploy, monitor, and maintain LLM-based applications in production.
+
+* **What Makes LLMOps Different?**
+  * **Prompt Engineering & Management:** Prompts are a critical part of the application and must be versioned, tested, and optimized like code.
+  * **Focus on Inference Cost & Latency:** Managing token usage and API latency is a primary operational concern.
+  * **Specialized Evaluation:** Traditional ML metrics (like accuracy) are often insufficient. LLMOps requires metrics for fluency, coherence, factual consistency (in RAG), and safety.
+  * **Vector Database Management:** For RAG systems, the vector database is a core production component that needs to be managed and updated.
+
+* **The LLMOps Lifecycle:**
+    1. **Data Management:** Collect, clean, and version data for fine-tuning or RAG.
+    2. **Prompt Engineering:** Design, test, and version control your prompts.
+    3. **Experiment Tracking:** Use tools like **Weights & Biases** or **MLflow** to log experiments with different models, prompts, and hyperparameters.
+    4. **Evaluation:** Rigorously test your application using both automated metrics and human-in-the-loop review.
+    5. **Deployment:** Serve the LLM application using scalable infrastructure (e.g., Kubernetes, serverless functions).
+    6. **Monitoring:** Use tools like **LangSmith** or **Arize** to track performance, cost, latency, and data drift in real-time.
+    7. **Continuous Improvement:** Use feedback from monitoring to iteratively improve your prompts, data, or models.
+
+#### Key Resources
+
+* **[Mastering LLMOps: Deploy, Manage, and Scale LLMs on AWS, GCP, and Azure](https://medium.com/@williamwarley/mastering-llmops-deploy-manage-and-scale-large-language-models-on-aws-gcp-and-azure-0ef073c7274d):** A comprehensive guide with step-by-step examples for deploying LLMs on major cloud platforms.
+* **[What is LLMOps? (LinkedIn Article)](https://www.linkedin.com/pulse/what-llmops-tips-implement-best-practices-nitin-kumar-sharma-ergnc):** A clear overview of LLMOps, its core components, and how it differs from traditional MLOps.
+* **[The LLMOps Lifecycle (ML Contant)](https://www.mlcontant.com/llmops):** An in-depth look at the stages of the LLMOps lifecycle with recommended tools for each stage.
 
 ### Security for LLM Applications 🛡️
 
-*Placeholder for security content.*
+Securing LLM applications involves addressing a new class of vulnerabilities that go beyond traditional web application security. The **OWASP Top 10 for Large Language Model Applications** is the industry-standard guide for understanding and mitigating these risks.
+
+* **The Core Risks:**
+  * **`LLM01: Prompt Injection`**: The most critical risk. Attackers craft malicious inputs to manipulate the LLM's behavior, bypass safety instructions, or cause unintended actions. This can be direct (user input) or indirect (hidden instructions in a document the LLM processes).
+  * **`LLM02: Sensitive Information Disclosure`**: The LLM unintentionally reveals sensitive data (PII, financial records, trade secrets) that was present in its training data or provided in a user's session.
+  * **`LLM04: Data and Model Poisoning`**: Attackers manipulate training data or RAG sources to introduce biases, vulnerabilities, or backdoors into the model.
+  * **`LLM05: Improper Output Handling`**: The application blindly trusts the LLM's output without sanitizing it, leading to downstream vulnerabilities like XSS, SQL injection, or command injection.
+  * **`LLM06: Excessive Agency`**: The LLM is granted too much autonomy to interact with other systems, allowing attackers to trick it into performing unauthorized actions (e.g., making purchases, deleting files).
+  * **`LLM08: Vector and Embedding Weaknesses`**: Specific to RAG systems, where attackers can poison vector databases or craft queries to retrieve sensitive information.
+
+#### Key Resources
+
+* **[OWASP Top 10 for LLM Applications (2025)](https://genai.owasp.org/llm-top-10/):** The official source. Every developer building with LLMs should be familiar with this list.
+* **[Breaking Down OWASP Top 10 LLM (2025)](https://medium.com/@appsecwarrior/breaking-down-owasp-top-10-llm-2025-cd99ed46761b):** A detailed analysis of each risk with exploitation techniques, mitigation strategies, and test cases.
+* **[OWASP Top 10 for LLM Applications & Generative AI: Key Updates for 2025](https://www.lasso.security/blog/owasp-top-10-for-llm-applications-generative-ai-key-updates-for-2025):** A summary of what's new in the latest version of the list.
 
 ## Staying Updated & Community Engagement 🌐🤝
 
-*Placeholder for community engagement content.*
+The field of AI is evolving at an unprecedented pace. Staying updated and engaging with the community are crucial for any software engineer in this domain.
+
+### Key Newsletters & Blogs 📰✍️
+
+* **The Batch (DeepLearning.AI):** Andrew Ng's weekly newsletter covering important AI news and breakthroughs.
+* **Import AI (Jack Clark):** A highly-regarded weekly newsletter with detailed analysis of cutting-edge AI research.
+* **Ben's Bites:** A popular daily AI newsletter with concise summaries of everything happening in AI.
+* **Hugging Face Blog:** Updates on new models, datasets, and libraries from a leading AI community.
+* **OpenAI Blog:** Official announcements and research from one of the leading AI companies.
+
+### Research Papers & Pre-print Servers 📄🔬
+
+* **[arXiv.org](https://arxiv.org/corr/) (cs.AI, cs.CL, cs.LG sections):** The primary pre-print server for AI research. Most significant papers appear here first.
+* **[Papers with Code](https://paperswithcode.com/):** An invaluable resource that links research papers to their code implementations.
+
+### Online Communities 🗣️💻
+
+* **Reddit:**
+  * **[r/LargeLanguageModels](https://www.reddit.com/r/LargeLanguageModels/):** Discussions on new models, research, and applications.
+  * **[r/LocalLLaMA](https://www.reddit.com/r/LocalLLaMA/):** Focused on running LLMs locally on your own hardware.
+* **Discord Servers:** Many open-source projects (LangChain, LlamaIndex, CrewAI, etc.) have their own Discord servers for community support and discussion.
+* **X (Formerly Twitter):** Follow key researchers, developers, and companies in the AI/LLM space for real-time updates.
+
+### Contributing to Open Source 🧑‍💻🤝
+
+Contributing to open-source LLM projects is one of the best ways to learn.
+
+* **Find a Project:** Look for projects you use, like **[LangChain](https://github.com/langchain-ai/langchain)**, **[LlamaIndex](https://github.com/run-llama/llama_index)**, or libraries on **[Hugging Face](https://github.com/huggingface)**.
+* **Start Small:** Look for `good first issue` labels. Fixing a typo in the documentation is a valuable contribution!
 
 ## Comprehensive Resource Hub 📚
 
@@ -397,23 +506,23 @@ This section contains a categorized list of hands-on resources, tools, and frame
 
 #### AI Agent Development
 
-* **[LangChain Agents Quickstart (Python Docs)](https://python.langchain.com/v0.1/docs/modules/agents/quick_start/)** — Step-by-step guide to building your first agent with LangChain.
+* **[LangChain Agents Quickstart (Python Docs)](https://python.langchain.com/docs/tutorials/agents/)** — Step-by-step guide to building your first agent with LangChain.
 * **[CrewAI Quickstart (Official Docs)](https://docs.crewai.com/getting-started/quickstart)** — Build collaborative, role-based agents with CrewAI.
 * **[AutoGen Basic Tutorial (Microsoft)](https://microsoft.github.io/autogen/0.2/docs/tutorial/introduction/)** — Create multi-agent conversations and workflows with AutoGen.
 * **[LangChain Agent Tutorial Notebooks (GitHub)](https://github.com/langchain-ai/langchain/tree/master/docs/docs/tutorials)** — Community-contributed agent demos.
 
 #### Backend Development
 
-* **[LangChain Agents for Backend (Docs)](https://python.langchain.com/docs/modules/agents/)** — Build tool-using agents for backend workflows.
+* **[LangChain Agents for Backend (Docs)](https://python.langchain.com/docs/tutorials/agents/)** — Build tool-using agents for backend workflows.
 * **[CrewAI Backend Agent Example (GitHub)](https://github.com/joaomdmoura/crewai-examples/tree/main/backend)** — Multi-agent backend orchestration demo.
-* **[Text-to-SQL with LLMs (LangChain Blog)](https://blog.langchain.dev/text-to-sql-with-langchain/)** — Tutorial for building a natural language to SQL agent.
+* **[Text-to-SQL with LLMs (LangChain Docs)](https://python.langchain.com/docs/tutorials/sql_qa/)** — Tutorial for building a natural language to SQL agent.
 * **[Vanna AI (GitHub)](https://github.com/vanna-ai/vanna)** — Open-source natural language to SQL agent for databases.
 * **[LLM-Powered Report Generation (Medium)](https://medium.com/@jagadeesan.ganesh/mastering-llm-ai-agents-building-and-using-ai-agents-in-python-with-real-world-use-cases-c578eb640e35)** — Guide to using agents for backend automation and reporting.
 
 #### Data Engineering
 
 * **[DEnGPT: Autonomous Data Engineer Agent (Substack)](https://juhache.substack.com/p/dengpt-autonomous-data-engineer-agent)** — Walkthrough of an agent building a data pipeline (Lambda, S3, Serverless Framework).
-* **[RAG for Data Engineering (LlamaIndex Docs)](https://docs.llamaindex.ai/en/stable/examples/advanced/RAG/)** — Example of using RAG for data extraction and enrichment.
+* **[RAG for Data Engineering (LlamaIndex Docs)](https://docs.llamaindex.ai/en/stable/examples/workflow/rag/)** — Example of using RAG for data extraction and enrichment.
 * **[AI Agents for Data Engineering (Matillion Blog)](https://www.matillion.com/blog/ai-agents-data-engineering)** — Blog on agents for ETL, schema inference, and pipeline monitoring.
 * **[Building LLM Applications With Vector Databases (Neptune.ai)](https://neptune.ai/blog/building-llm-applications-with-vector-databases)** — Guide to vectorizing and indexing data for semantic search.
 * **[LlamaIndex Data Connectors (GitHub)](https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/connectors)** — Community and official data loader templates.
@@ -424,19 +533,19 @@ This section contains a categorized list of hands-on resources, tools, and frame
 * **[llm-opstower (GitHub)](https://github.com/opstower-ai/llm-opstower)** — CLI tool to query AWS services, CloudWatch metrics, and billing using LLMs.
 * **[k8s-langchain (GitHub)](https://github.com/jjoneson/k8s-langchain)** — Agent to interact with Kubernetes clusters using LLMs.
 * **[How AI Agents Will Transform DevOps Workflows (The New Stack)](https://thenewstack.io/how-ai-agents-will-transform-devops-workflows-for-engineers/)** — Blog on LLMs for IaC, monitoring, and more.
-* **[Zencoder Previews AI Agents for DevOps (DevOps.com)](https://devops.com/zencoder-previews-ai-agents-for-devops-engineering-teams/)** — AI agents for vulnerability scanning and patching.
+* **[Generative AI's Impact on Developers (DevOps.com)](https://devops.com/generative-ais-impact-on-developers/)** — AI agents for vulnerability scanning and patching.
 
 #### Frontend Development
 
 * **[ReactAgent.io (GitHub)](https://github.com/reactagentio/reactagent)** — Autonomous agent that generates React components from user stories.
 * **[Building an AI agent for your frontend project (LogRocket Blog)](https://blog.logrocket.com/building-ai-agent-frontend-project/)** — Step-by-step guide to integrating LLMs in frontend apps.
-* **[AI-Powered Search in React (Vercel Blog)](https://vercel.com/blog/ai-powered-search-in-next-js)** — Guide to adding semantic search with LLMs to a Next.js app.
+* **[AI-Powered Search in React (Vercel Blog)](https://vercel.com/blog/7-ai-features-you-can-add-to-your-app-today)** — Guide to adding semantic search with LLMs to a Next.js app.
 * **[How AI Agents Are Quietly Transforming Frontend Development (The New Stack)](https://thenewstack.io/how-ai-agents-are-quietly-transforming-frontend-development/)** — Blog on agent-driven UI refactoring and accessibility.
 
 #### LLM & Agent Adoption Examples
 
 * **[How GitHub Copilot Boosts Developer Productivity (GitHub Blog)](https://github.blog/2023-03-22-github-copilot-x-the-ai-powered-developer-experience/)** — Real-world impact of LLMs in software engineering.
-* **[How Generative AI Is Changing Software Development (DevOps.com)](https://devops.com/how-generative-ai-is-changing-software-development/)** — Practical examples of GenAI in the SDLC.
+* **[Generative AI’s Impact on Developers (DevOps.com)](https://devops.com/generative-ais-impact-on-developers/)** — Practical examples of GenAI in the SDLC.
 * **[Awesome LLM Applications (GitHub)](https://github.com/hwchase17/awesome-llm-applications)** — Curated list of real-world LLM/agent-powered projects.
 
 #### LLM API Quickstarts
@@ -444,15 +553,15 @@ This section contains a categorized list of hands-on resources, tools, and frame
 * **[OpenAI API Quickstart (Python)](https://platform.openai.com/docs/quickstart?context=python)** — Official quickstart for using GPT models via API.
 * **[Claude API Quickstart (Docs)](https://docs.anthropic.com/claude/docs/quickstart-guide)** — Get started with Claude models.
 * **[Gemini API Quickstart (Python)](https://ai.google.dev/tutorials/python_quickstart)** — Step-by-step guide for Gemini models.
-* **[Cohere API Quickstart (Docs)](https://docs.cohere.com/docs/quickstart)** — Start using Cohere's Command models.
+* **[Cohere API Quickstart (Docs)](https://docs.cohere.com/)** — Start using Cohere's Command models.
 * **[Inference API Quickstart (Docs)](https://huggingface.co/docs/api-inference/quicktour)** — Run inference on thousands of models via API.
 
 #### LLM Evaluation & Debugging
 
-* **[LangSmith Quickstart (Docs)](https://docs.smith.langchain.com/quickstart)** — Trace, debug, and evaluate LLM chains and agents.
+* **[LangSmith Quickstart (Docs)](https://docs.smith.langchain.com/observability/quick_start)** — Trace, debug, and evaluate LLM chains and agents.
 * **[DeepEval Quickstart (GitHub)](https://github.com/confident-ai/deepeval#quickstart)** — Open-source framework for LLM evaluation with metrics and pytest integration.
-* **[Ragas Quickstart (Docs)](https://raga.readthedocs.io/en/latest/getting_started/quickstart.html)** — Evaluate RAG pipelines with specialized metrics.
-* **[W&B LLM Evaluation Guide (Docs)](https://docs.wandb.ai/guides/llm)** — Track, compare, and visualize LLM experiments.
+* **[Ragas Quickstart (Docs)](https://docs.ragas.io/en/latest/getstarted/rag_eval/)** — Evaluate RAG pipelines with specialized metrics.
+* **[W&B LLM Evaluation Guide (Docs)](https://wandb.ai/site/solutions/llmops)** — Track, compare, and visualize LLM experiments.
 
 #### LLM Fine-tuning
 
@@ -466,7 +575,7 @@ This section contains a categorized list of hands-on resources, tools, and frame
 * **[LangChain Getting Started (Python Docs)](https://python.langchain.com/docs/get_started/quickstart)** — Official quickstart for building LLM apps.
 * **[LlamaIndex Quickstart (Docs)](https://docs.llamaindex.ai/en/stable/getting_started/starter_example/)** — Step-by-step guide for RAG and data-augmented LLM apps.
 * **[CrewAI Quickstart (Docs)](https://docs.crewai.com/getting-started/quickstart)** — Build collaborative, role-based agents.
-* **[AutoGen Getting Started (Microsoft Docs)](https://microsoft.github.io/autogen/docs/getting-started/basic-tutorial/)** — Multi-agent orchestration quickstart.
+* **[AutoGen Getting Started (Microsoft Docs)](https://microsoft.github.io/autogen/0.2/docs/tutorial/introduction/)** — Multi-agent orchestration quickstart.
 
 #### LLM Playgrounds & Quickstarts
 
@@ -478,13 +587,13 @@ This section contains a categorized list of hands-on resources, tools, and frame
 
 #### LLM Security
 
-* **[OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/)** — Official list of LLM-specific security risks and mitigations.
-* **[Prompt Injection Attacks & Defenses (OWASP)](https://owasp.org/www-community/attacks/Prompt_Injection)** — Learn to test and defend against prompt injection.
+* **[OWASP Top 10 for LLM Applications](https://genai.owasp.org/llm-top-10/)** — Official list of LLM-specific security risks and mitigations.
+* **[Prompt Injection Attacks & Defenses (OWASP)](https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html)** — Learn to test and defend against prompt injection.
 * **[Secure LLM App Patterns (genai.owasp.org)](https://genai.owasp.org/)** — Secure design patterns and checklists for LLM applications.
 
 #### Multi-Agent Systems
 
-* **[AutoGen Quickstart (Microsoft)](https://microsoft.github.io/autogen/docs/getting-started/basic-tutorial/)** — Build multi-agent LLM workflows.
+* **[AutoGen Quickstart (Microsoft)](https://microsoft.github.io/autogen/0.2/docs/tutorial/introduction/)** — Build multi-agent LLM workflows.
 * **[CrewAI Multi-Agent Example (Docs)](https://docs.crewai.com/getting-started/quickstart)** — Role-based agent collaboration.
 * **[LangGraph Quickstart (Docs)](https://python.langchain.com/docs/langgraph/)** — Build graph-based multi-agent systems.
 
@@ -492,7 +601,7 @@ This section contains a categorized list of hands-on resources, tools, and frame
 
 * **[Prompt Engineering Guide (promptingguide.ai)](https://www.promptingguide.ai/)** — Comprehensive, interactive guide with techniques, examples, and a playground.
 * **[PromptPerfect Playground](https://promptperfect.jina.ai/)** — Optimize and test prompts interactively.
-* **[Prompt Engineering Challenges (LearnPrompting)](https://learnprompting.org/challenges)** — Practice and test your skills with real-world prompt challenges.
+* **[Prompt Engineering Challenges (LearnPrompting)](https://learnprompting.org/docs/basics/prompting)** — Practice and test your skills with real-world prompt challenges.
 
 #### QA & Testing
 
@@ -506,15 +615,15 @@ This section contains a categorized list of hands-on resources, tools, and frame
 * **[Responsible AI Dashboard (Microsoft)](https://github.com/microsoft/responsible-ai-toolbox)** — Visualize, diagnose, and mitigate model fairness, explainability, and error analysis issues.
 * **[Google Responsible AI Practices Checklist](https://ai.google/responsibilities/responsible-ai-practices/)** — Practical checklist for building responsible AI systems.
 * **[Fairness Indicators (TensorFlow)](https://www.tensorflow.org/responsible_ai/fairness_indicators/guide)** — Tool for evaluating model fairness and bias in ML workflows.
-* **[Partnership on AI - Responsible Practices](https://partnershiponai.org/responsible-publications/)** — Resources and tools for ethical AI development.
-* **[AI Fairness 360 (IBM)](https://aif360.mybluemix.net/)** — Open-source toolkit to help detect and mitigate bias in machine learning models.
+* **[Partnership on AI - Responsible Practices](https://partnershiponai.org/paper/responsible-publication-recommendations/)** — Resources and tools for ethical AI development.
+* **[AI Fairness 360 (GitHub)](https://github.com/Trusted-AI/AIF360)** — Open-source toolkit to help detect and mitigate bias in machine learning models.
 
 #### Vector Databases & RAG
 
 * **[Pinecone Quickstart (Docs)](https://docs.pinecone.io/docs/quickstart)** — Step-by-step guide to creating and querying a vector DB.
 * **[Weaviate Quickstart (Docs)](https://weaviate.io/developers/weaviate/quickstart)** — Launch and use Weaviate locally or in the cloud.
 * **[Chroma Quickstart (Docs)](https://docs.trychroma.com/getting-started)** — Build a local vector DB in Python.
-* **[Milvus Quickstart (Docs)](https://milvus.io/docs/quick_start.md)** — Deploy and use Milvus for vector search.
+* **[Milvus Quickstart (Docs)](https://milvus.io/docs/quickstart.md)** — Deploy and use Milvus for vector search.
 * **[Qdrant Quickstart (Docs)](https://qdrant.tech/documentation/quick-start/)** — Set up and query Qdrant.
 
 </details>
