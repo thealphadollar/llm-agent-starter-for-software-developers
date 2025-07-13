@@ -38,3 +38,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Removed the original sprawling, single-document format.
 - De-duplicated numerous links throughout the document.
+
+## [0.8.0] - 2025-06-27
+
+### Added
+
+- Initial README.md file with rough roadmap and learning resources for all software engineers.
+- LICENSE file.
+
+### Changed
+
+### Removed
