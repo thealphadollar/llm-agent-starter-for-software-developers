@@ -39,29 +39,29 @@
     - [X] 2.1.2 Add placeholder headers for Motivation, Quick Start, Common Knowledge, Backend, Other Roles, Advanced Topics
   - [X] 2.2 Implement a detailed Table of Contents (ToC)
   - [X] 2.3 Create collapsible sections using `<details>` for non-essential deep-dive content
-- [ ] 3.0 Build Motivation and Quick Start Sections
+- [X] 3.0 Build Motivation and Quick Start Sections
   - [X] 3.1 Write the "Why AI for Engineers?" motivation section
     - [X] 3.1.1 Draft a compelling introduction on the importance of AI/LLMs for software engineers
     - [X] 3.1.2 Incorporate 2-3 high-level case studies or real-world examples
   - [X] 3.2 Create the "Quick Start: 30-Minute Challenge" section
     - [X] 3.2.1 Design a simple, engaging hands-on task for immediate value
     - [X] 3.2.2 Provide clear, step-by-step instructions and code snippets
-- [ ] 4.0 Restructure Core Learning Content
+- [X] 4.0 Restructure Core Learning Content
   - [X] 4.1 Consolidate all "Hands-On Resources" into a single, categorized list
     - [X] 4.1.1 Create a master list of all hands-on resources from `external-link-catalog.md`
     - [X] 4.1.2 Group resources by topic (e.g., "LLM Playgrounds", "Agent Frameworks", "Vector DBs")
     - [X] 4.1.3 Place the consolidated list in a relevant section, possibly the Quick Start or a dedicated "Tools & Resources" section
-  - [ ] 4.2 Merge common concepts from role-specific sections into the "Common Knowledge" section
-    - [ ] 4.2.1 Extract overlapping content on Security, Cost Management, and Observability
-    - [ ] 4.2.2 Create unified subsections for these topics
-  - [ ] 4.3 Rewrite and condense explanations for core concepts (e.g., RAG, Prompt Engineering)
+  - [X] 4.2 Merge common concepts from role-specific sections into the "Common Knowledge" section
+    - [X] 4.2.1 Extract overlapping content on Security, Cost Management, and Observability
+    - [X] 4.2.2 Create unified subsections for these topics
+  - [X] 4.3 Rewrite and condense explanations for core concepts (e.g., RAG, Prompt Engineering)
     - [X] 4.3.1 Summarize key ideas and link to detailed articles or the "Advanced Topics" section
     - [X] 4.3.2 Use collapsible sections for detailed explanations
 - [ ] 5.0 Develop Backend Engineering Section
   - [ ] 5.1 Create a detailed learning path for Backend Engineers
     - [ ] 5.1.1 Outline specific skills, tools, and use cases for backend
     - [ ] 5.1.2 Prioritize hands-on tutorials and example projects
-  - [ ] 5.2 Add at least 3 backend-focused, hands-on tutorials
+  - [ ] 5.2 Add at least 3 backend-focused, hands-on tutorials (preferably external link)
     - [ ] 5.2.1 Example: "Building a RAG-powered API with LangChain and FastAPI"
     - [ ] 5.2.2 Example: "Creating a Natural Language to SQL Agent"
     - [ ] 5.2.3 Example: "Automating a business process with CrewAI"
