@@ -44,7 +44,6 @@ We welcome contributions of all kinds, from fixing typos and broken links to wri
 We are actively looking for contributions to the following specialization sections:
 
 * `For Frontend Engineers`
-* `For DevOps Engineers`
 * `For Data Engineers`
 * `For QA Engineers`
 
