@@ -57,14 +57,14 @@
   - [X] 4.3 Rewrite and condense explanations for core concepts (e.g., RAG, Prompt Engineering)
     - [X] 4.3.1 Summarize key ideas and link to detailed articles or the "Advanced Topics" section
     - [X] 4.3.2 Use collapsible sections for detailed explanations
-- [ ] 5.0 Develop Backend Engineering Section
-  - [ ] 5.1 Create a detailed learning path for Backend Engineers
-    - [ ] 5.1.1 Outline specific skills, tools, and use cases for backend
-    - [ ] 5.1.2 Prioritize hands-on tutorials and example projects
-  - [ ] 5.2 Add at least 3 backend-focused, hands-on tutorials (preferably external link)
-    - [ ] 5.2.1 Example: "Building a RAG-powered API with LangChain and FastAPI"
-    - [ ] 5.2.2 Example: "Creating a Natural Language to SQL Agent"
-    - [ ] 5.2.3 Example: "Automating a business process with CrewAI"
+- [X] 5.0 Develop Backend Engineering Section
+  - [X] 5.1 Create a detailed learning path for Backend Engineers
+    - [X] 5.1.1 Outline specific skills, tools, and use cases for backend
+    - [X] 5.1.2 Prioritize hands-on tutorials and example projects
+  - [X] 5.2 Add at least 3 backend-focused, hands-on tutorials (preferably external link)
+    - [X] 5.2.1 Example: "Building a RAG-powered API with LangChain and FastAPI"
+    - [X] 5.2.2 Example: "Creating a Natural Language to SQL Agent"
+    - [X] 5.2.3 Example: "Automating a business process with CrewAI"
 - [ ] 6.0 Create Framework for Other Specializations
   - [ ] 6.1 Create placeholder sections for Frontend, DevOps, Data, and QA
     - [ ] 6.1.1 Add a brief intro for each section explaining the goal
