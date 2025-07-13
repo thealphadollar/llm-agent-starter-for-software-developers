@@ -47,16 +47,16 @@
     - [X] 3.2.1 Design a simple, engaging hands-on task for immediate value
     - [X] 3.2.2 Provide clear, step-by-step instructions and code snippets
 - [ ] 4.0 Restructure Core Learning Content
-  - [ ] 4.1 Consolidate all "Hands-On Resources" into a single, categorized list
-    - [ ] 4.1.1 Create a master list of all hands-on resources from `external-link-catalog.md`
-    - [ ] 4.1.2 Group resources by topic (e.g., "LLM Playgrounds", "Agent Frameworks", "Vector DBs")
-    - [ ] 4.1.3 Place the consolidated list in a relevant section, possibly the Quick Start or a dedicated "Tools & Resources" section
+  - [X] 4.1 Consolidate all "Hands-On Resources" into a single, categorized list
+    - [X] 4.1.1 Create a master list of all hands-on resources from `external-link-catalog.md`
+    - [X] 4.1.2 Group resources by topic (e.g., "LLM Playgrounds", "Agent Frameworks", "Vector DBs")
+    - [X] 4.1.3 Place the consolidated list in a relevant section, possibly the Quick Start or a dedicated "Tools & Resources" section
   - [ ] 4.2 Merge common concepts from role-specific sections into the "Common Knowledge" section
     - [ ] 4.2.1 Extract overlapping content on Security, Cost Management, and Observability
     - [ ] 4.2.2 Create unified subsections for these topics
   - [ ] 4.3 Rewrite and condense explanations for core concepts (e.g., RAG, Prompt Engineering)
-    - [ ] 4.3.1 Summarize key ideas and link to detailed articles or the "Advanced Topics" section
-    - [ ] 4.3.2 Use collapsible sections for detailed explanations
+    - [X] 4.3.1 Summarize key ideas and link to detailed articles or the "Advanced Topics" section
+    - [X] 4.3.2 Use collapsible sections for detailed explanations
 - [ ] 5.0 Develop Backend Engineering Section
   - [ ] 5.1 Create a detailed learning path for Backend Engineers
     - [ ] 5.1.1 Outline specific skills, tools, and use cases for backend
