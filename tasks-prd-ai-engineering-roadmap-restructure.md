@@ -65,13 +65,13 @@
     - [X] 5.2.1 Example: "Building a RAG-powered API with LangChain and FastAPI"
     - [X] 5.2.2 Example: "Creating a Natural Language to SQL Agent"
     - [X] 5.2.3 Example: "Automating a business process with CrewAI"
-- [ ] 6.0 Create Framework for Other Specializations
-  - [ ] 6.1 Create placeholder sections for Frontend, DevOps, Data, and QA
-    - [ ] 6.1.1 Add a brief intro for each section explaining the goal
-    - [ ] 6.1.2 Include a call to action for community contributions
-  - [ ] 6.2 Develop a template for role-specific content
-    - [ ] 6.2.1 Define the standard structure for each role section (e.g., Key Use Cases, Core Tools, Tutorials)
-    - [ ] 6.2.2 Add the template to `CONTRIBUTING.md`
+- [X] 6.0 Create Framework for Other Specializations
+  - [X] 6.1 Create placeholder sections for Frontend, DevOps, Data, and QA
+    - [X] 6.1.1 Add a brief intro for each section explaining the goal
+    - [X] 6.1.2 Include a call to action for community contributions
+  - [X] 6.2 Develop a template for role-specific content
+    - [X] 6.2.1 Define the standard structure for each role section (e.g., Key Use Cases, Core Tools, Tutorials)
+    - [X] 6.2.2 Add the template to `CONTRIBUTING.md`
 - [ ] 7.0 Verify Links and Resources
   - [ ] 7.1 Check all links in the new `README-v2.md` for validity
     - [ ] 7.1.1 Use a link checker tool or script to identify broken links
