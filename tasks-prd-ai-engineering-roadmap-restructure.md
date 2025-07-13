@@ -89,7 +89,7 @@
     - [X] 9.1.1 Use a link checker tool or script to identify broken links
     - [X] 9.1.2 Replace or remove dead links
   - [X] 9.2 Ensure all resources are relevant, latest, and high-quality
-- [ ] 10.0 Implement Supporting Documentation
-  - [ ] 10.1 Create `CHANGELOG.md`
-    - [ ] 10.1.1 Add an entry for this initial restructuring (v2.0)
-  - [ ] 10.2 Final review and replacement of old `README.md` with `README-v2.md`
+- [X] 10.0 Implement Supporting Documentation
+  - [X] 10.1 Create `CHANGELOG.md`
+    - [X] 10.1.1 Add an entry for this initial restructuring (v2.0)
+  - [X] 10.2 Final review and replacement of old `README.md` with `README-v2.md`
